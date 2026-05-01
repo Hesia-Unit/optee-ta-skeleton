@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate host syntax
+        run: gcc -std=c11 -Wall -Wextra -Werror -Ita/include -Ici/stubs -fsyntax-only host/main.c
+
+      - name: Validate TA syntax
+        run: gcc -std=c11 -Wall -Wextra -Werror -Ita/include -Ici/stubs -fsyntax-only ta/ta_skeleton.c
+

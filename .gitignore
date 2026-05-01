@@ -1,0 +1,7 @@
+*.o
+*.ta
+*.elf
+*.out
+host/optee-ca
+build/
+

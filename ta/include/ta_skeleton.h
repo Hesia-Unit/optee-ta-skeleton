@@ -1,0 +1,16 @@
+#ifndef TA_SKELETON_H
+#define TA_SKELETON_H
+
+#define TA_SKELETON_UUID \
+    { 0x9e6f1bb9, 0x7fc2, 0x4a40, \
+      { 0x9e, 0x6d, 0x7f, 0x59, 0x10, 0xc4, 0xf4, 0xd2 } }
+
+#define TA_SKELETON_CMD_GET_VERSION  0x0001
+#define TA_SKELETON_CMD_GET_RANDOM   0x0002
+#define TA_SKELETON_CMD_COUNTER_READ 0x0003
+#define TA_SKELETON_CMD_COUNTER_WRITE 0x0004
+
+#define TA_SKELETON_VERSION_MAX 32
+
+#endif /* TA_SKELETON_H */
+
